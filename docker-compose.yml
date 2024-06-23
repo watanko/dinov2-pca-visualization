@@ -1,0 +1,18 @@
+services:
+  work:
+    build: .
+    runtime: nvidia
+    stdin_open: true
+    tty: true
+    ipc: host
+    volumes:
+      - $PWD:/work
+    working_dir: /work
+    environment:
+      - PYTHONPATH=/work
+      - NVIDIA_VISIBLE_DEVICES=0
+    ulimits:
+      memlock: -1
+      stack: 67108864
+    ports:
+      - "7870:7870"
