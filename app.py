@@ -106,7 +106,7 @@ demo = gr.Interface(
     title="DINOV2 PCA",
     description=description,
     examples=[
-       ["assets/1.png", "assets/2.png","assets/3.png","assets/4.png", 0.9, True],
+       ["assets/1.png", "assets/2.png","assets/3.png","assets/4.png", 0.1, False],
     ]
 )
 demo.launch(server_port=7870, server_name="0.0.0.0")
